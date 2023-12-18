@@ -1,6 +1,5 @@
 import json
 from bson import json_util, ObjectId
-from pprint import pprint
 from pymongo import MongoClient
 
 MONGO_URI = "mongodb+srv://jainambhavsar95:Gr8estSecr8Is%3F@stocks.3zfgscg.mongodb.net/"
