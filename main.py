@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-
+from stock_search import search
 app = FastAPI()
 
 
@@ -9,6 +9,10 @@ def read_root():
     return {"Hello": "World"}
 
 
-if __name__ == "__main__":
-   uvicorn.run(app, host="0.0.0.0", port=8080)
+@app.get("/stock_search/{query}")
+def read_item(query: str):
+    return search(query)
 
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8080)
