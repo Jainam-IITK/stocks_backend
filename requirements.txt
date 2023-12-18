@@ -1,6 +1,4 @@
 fastapi
 uvicorn[standard]
 pymongo[srv]
-pprint
-json
 bson
